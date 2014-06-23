@@ -13,14 +13,9 @@ class Trie:
 
 	def insert(self, key):
 		curr = self.root
-		#print 'word:', key
 		for c in key:
 			if c not in curr.ptr:
-				#print 'inserting', c
 				curr.ptr[c] = Node()
-			else:
-				#print c, 'exists'
-				pass
 			curr = curr.ptr[c]
 		curr.wordEnd = True
 
